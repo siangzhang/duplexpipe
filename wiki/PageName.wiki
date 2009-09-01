@@ -1,6 +1,4 @@
 #labels 双向管道,pipe,proxy,duplex,net,tcp,nc,瑞士军刀,转发
-= DuplexPipe 双向管道！=
-
 == Introduction ==
 
 本程序是一个双向管道。传统的管道只能从一端输入、一端输出。双向管道不仅可以让进程 A 的输出作为进程 B 的输入，也会让进程 B 的输出作为进程 A 的输入。这样就可以让两个进程实现交流。
