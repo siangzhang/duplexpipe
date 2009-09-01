@@ -1,5 +1,5 @@
 #labels 双向管道,pipe,proxy,duplex,net,tcp,nc,瑞士军刀,转发
-= DuplexPipe: 双向管道！=
+= DuplexPipe 双向管道！=
 
 == Introduction ==
 
