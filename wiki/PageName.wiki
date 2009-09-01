@@ -1,28 +1,24 @@
-#labels 双向管道,pipe,proxy,duplex,net,tcp
-<p>
-<B>DuplexPipe: </B>双向管道！
-</p>
-<p>
-本程序是一个双向管道。传统的管道只能从一端输入、一端输出。双向管道不仅可以<br>
-让进程 A 的输出作为进程 B 的输入，也会让进程 B 的输出作为进程 A 的输入。<br>
-这样就可以让两个进程实现交流。
-</p>
-<p>
-本程序主要是 TCP 转发工具。允许监听本地端口，也可以主动连接远程端口。<br>
-如果和瑞士军刀“nc -e”配合使用， 就能实现本地进程和网络进程任意沟通。
-</p>
-<p>
-程序的具体使用方法可以参见 help()。
-</p>
+#labels 双向管道,pipe,proxy,duplex,net,tcp,nc,瑞士军刀,转发
+#DuplexPipe: 双向管道！
 
 = Introduction =
 
-Add your content here.
+本程序是一个双向管道。传统的管道只能从一端输入、一端输出。双向管道不仅可以让进程 A 的输出作为进程 B 的输入，也会让进程 B 的输出作为进程 A 的输入。这样就可以让两个进程实现交流。
 
+本程序主要是 TCP 转发工具。允许监听本地端口，也可以主动连接远程端口。如果和瑞士军刀“nc -e”配合使用， 就能实现本地进程和网络进程任意沟通。
 
 = Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+最新版本：0.1.0
+维护者: redraiment
+
+用法: java -jar DuplexPipe [-vh] model model
+选项:
+	-v		输出一些提示信息
+	-h		显示本帮助文档
+模式:
+	-l port		监听本地端口
+	-c host port		连接远程端口
+示例:
+	java pipe.DuplexPipe -c 192.168.1.100 3389 -l 1234
+	将本地 1234 号端口上的信息转发给 192.168.1.100 的 3389端口
