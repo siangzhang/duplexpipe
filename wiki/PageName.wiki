@@ -12,13 +12,16 @@
 最新版本：0.1.0
 维护者: redraiment
 
-用法: java -jar DuplexPipe [-vh] model model
+用法: 
+{{{java -jar DuplexPipe [-vh] model model}}}
 选项:
-        -v              输出一些提示信息
-        -h              显示本帮助文档
+ * -v              输出一些提示信息
+ * -h              显示本帮助文档
 模式:
-        -l port         监听本地端口
-        -c host port    连接远程端口
+ * -l port         监听本地端口
+ * -c host port    连接远程端口
 示例:
-        java pipe.DuplexPipe -c 192.168.1.100 3389 -l 1234
+{{{
+java -jar DuplexPipe -c 192.168.1.100 3389 -l 1234
+}}}
         将本地 1234 号端口上的信息转发给 192.168.1.100 的 3389端口
