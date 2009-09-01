@@ -1,4 +1,4 @@
-package pipe;
+ï»¿package pipe;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -7,10 +7,10 @@ import java.net.UnknownHostException;
 
 /**
  * <p>
- * <B>SocketFactory: </B>Socket ¹¤³§£¬¿ÉÒÔ¼àÌı±¾µØ¶Ë¿Ú»òÕßÁ¬½ÓÔ¶³Ì¶Ë¿Ú¡£
+ * <B>SocketFactory: </B>Socket å·¥å‚ï¼Œå¯ä»¥ç›‘å¬æœ¬åœ°ç«¯å£æˆ–è€…è¿æ¥è¿œç¨‹ç«¯å£ã€‚
  * </p>
  * <p>
- * ¸ÃÀàÖ÷ÒªÊÇÎªÁËÆÁ±Î»ñÈ¡ Socket µÄÏ¸½Ú£¬¼ò»¯Ö÷³ÌĞòµÄ±àÂë¡£
+ * è¯¥ç±»ä¸»è¦æ˜¯ä¸ºäº†å±è”½è·å– Socket çš„ç»†èŠ‚ï¼Œç®€åŒ–ä¸»ç¨‹åºçš„ç¼–ç ã€‚
  * </p>
  * 
  * @author redraiment
@@ -24,7 +24,7 @@ public class SocketFactory
 	private String ip = null;
 	private int port;
 
-	/** Í¨¹ıÖÆ¶¨¶Ë¿ÚÀ´»ñÈ¡ Socket¡£ */
+	/** é€šè¿‡åˆ¶å®šç«¯å£æ¥è·å– Socketã€‚ */
 	public SocketFactory ( int port )
 	{
 		try
@@ -37,14 +37,14 @@ public class SocketFactory
 		}
 	}
 
-	/** Í¨¹ıÖÆ¶¨Ô¶³ÌµØÖ·ºÍ¶Ë¿ÚÀ´»ñÈ¡ Socket¡£ */
+	/** é€šè¿‡åˆ¶å®šè¿œç¨‹åœ°å€å’Œç«¯å£æ¥è·å– Socketã€‚ */
 	public SocketFactory ( String ip, int port )
 	{
 		this.ip = ip;
 		this.port = port;
 	}
 
-	/** »ñÈ¡ Socket¡£ */
+	/** è·å– Socketã€‚ */
 	public Socket getSocket ()
 	{
 		try

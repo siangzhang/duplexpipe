@@ -1,11 +1,11 @@
-package pipe;
+ï»¿package pipe;
 
 /**
  * <p>
- * <B>Verboser: </B>µ±³ÌĞò¿ªÆô -v Ñ¡ÏîÊ±£¬½«Ïò stderr Êä³öÏêÏ¸µÄÌáÊ¾¡£
+ * <B>Verboser: </B>å½“ç¨‹åºå¼€å¯ -v é€‰é¡¹æ—¶ï¼Œå°†å‘ stderr è¾“å‡ºè¯¦ç»†çš„æç¤ºã€‚
  * </p>
  * <p>
- * ¸ÃÀàÎªµ¥¼şÀà£¬Í¨¹ı getVerboser() »ñµÃÀàÊµÀı¡£
+ * è¯¥ç±»ä¸ºå•ä»¶ç±»ï¼Œé€šè¿‡ getVerboser() è·å¾—ç±»å®ä¾‹ã€‚
  * </p>
  * 
  * @author redraiment
@@ -17,30 +17,30 @@ public class Verboser
 	private static Verboser v = new Verboser ();
 	private boolean verbose = false;
 
-	/** µ¥¼şÀàµÄ¹¹Ôì·½·¨ÎªË½ÓĞ¡£ */
+	/** å•ä»¶ç±»çš„æ„é€ æ–¹æ³•ä¸ºç§æœ‰ã€‚ */
 	private Verboser ()
 	{
 	}
 
-	/** »ñµÃÀàÊµÀı¡£ */
+	/** è·å¾—ç±»å®ä¾‹ã€‚ */
 	public static Verboser getVerboser ()
 	{
 		return v;
 	}
 
-	/** ÊÇ·ñÊä³öÌáÊ¾ĞÅÏ¢¡£ */
+	/** æ˜¯å¦è¾“å‡ºæç¤ºä¿¡æ¯ã€‚ */
 	public boolean isVerbose ()
 	{
 		return verbose;
 	}
 
-	/** ÉèÖÃÊÇ·ñÊä³öÌáÊ¾ĞÅÏ¢¡£ */
+	/** è®¾ç½®æ˜¯å¦è¾“å‡ºæç¤ºä¿¡æ¯ã€‚ */
 	public void setVerbose ( boolean verbose )
 	{
 		this.verbose = verbose;
 	}
 
-	/** ´óÉùº°³öÌáÊ¾ĞÅÏ¢£¡ */
+	/** å¤§å£°å–Šå‡ºæç¤ºä¿¡æ¯ï¼ */
 	public void holler ( String msg )
 	{
 		if ( verbose )
@@ -49,7 +49,7 @@ public class Verboser
 		}
 	}
 
-	/** ÖÂÃü´íÎó£¡ÌáÊ¾ºóÍË³ö¡£ */
+	/** è‡´å‘½é”™è¯¯ï¼æç¤ºåé€€å‡ºã€‚ */
 	public void bail ( String msg )
 	{
 		holler ( msg );

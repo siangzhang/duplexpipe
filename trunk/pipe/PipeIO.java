@@ -1,4 +1,4 @@
-package pipe;
+ï»¿package pipe;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -6,11 +6,11 @@ import java.io.OutputStream;
 
 /**
  * <p>
- * <B>PipeIO: </B>¹ÜµÀµÄÊäÈëÊä³ö²Ù×÷¡£
+ * <B>PipeIO: </B>ç®¡é“çš„è¾“å…¥è¾“å‡ºæ“ä½œã€‚
  * </p>
  * <p>
- * Í¨¹ıÖÆ¶¨¹ÜµÀµÄÊäÈëÊä³ö£¬À´ÊµÏÖ½ø³ÌÍ¨ĞÅ¡£<br>
- * ÒòÎªÇëÇóºÍÏàÓ¦ÊÇÒì²½µÄ£¬Òò´Ë²ÉÓÃ¶àÏß³Ì¡£
+ * é€šè¿‡åˆ¶å®šç®¡é“çš„è¾“å…¥è¾“å‡ºï¼Œæ¥å®ç°è¿›ç¨‹é€šä¿¡ã€‚<br>
+ * å› ä¸ºè¯·æ±‚å’Œç›¸åº”æ˜¯å¼‚æ­¥çš„ï¼Œå› æ­¤é‡‡ç”¨å¤šçº¿ç¨‹ã€‚
  * </p>
  * 
  * @author redraiment
@@ -23,14 +23,14 @@ public class PipeIO extends Thread
 	private InputStream in = null;
 	private OutputStream out = null;
 
-	/** ĞèÒªÖÆ¶¨¹ÜµÀµÄÊäÈëÁ÷ºÍÊä³öÁ÷¡£ */
+	/** éœ€è¦åˆ¶å®šç®¡é“çš„è¾“å…¥æµå’Œè¾“å‡ºæµã€‚ */
 	public PipeIO ( InputStream in, OutputStream out )
 	{
 		this.in = in;
 		this.out = out;
 	}
 
-	/** ´ÓÊäÈëÁ÷»ñÈ¡Êı¾İ£¬ÍêÕûµØĞ´µ½Êä³öÁ÷¡£ */
+	/** ä»è¾“å…¥æµè·å–æ•°æ®ï¼Œå®Œæ•´åœ°å†™åˆ°è¾“å‡ºæµã€‚ */
 	public void run ()
 	{
 		if ( in == null || out == null )
@@ -41,7 +41,7 @@ public class PipeIO extends Thread
 			byte[] buffer = new byte[1024];
 			int len;
 
-			// ºËĞÄ£º¶ÁĞ´Êı¾İ
+			// æ ¸å¿ƒï¼šè¯»å†™æ•°æ®
 			while ( ( len = in.read ( buffer ) ) != -1 )
 			{
 				out.write ( buffer, 0, len );
@@ -55,7 +55,7 @@ public class PipeIO extends Thread
 
 		try
 		{
-			// ÎŞÂÛÈçºÎ¶¼¹Ø±ÕIO stream¡£
+			// æ— è®ºå¦‚ä½•éƒ½å…³é—­IO streamã€‚
 			if ( in != null )
 			{
 				in.close ();
