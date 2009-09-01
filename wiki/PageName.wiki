@@ -1,0 +1,28 @@
+#labels 双向管道,pipe,proxy,duplex,net,tcp
+<p>
+<B>DuplexPipe: </B>双向管道！
+</p>
+<p>
+本程序是一个双向管道。传统的管道只能从一端输入、一端输出。双向管道不仅可以<br>
+让进程 A 的输出作为进程 B 的输入，也会让进程 B 的输出作为进程 A 的输入。<br>
+这样就可以让两个进程实现交流。
+</p>
+<p>
+本程序主要是 TCP 转发工具。允许监听本地端口，也可以主动连接远程端口。<br>
+如果和瑞士军刀“nc -e”配合使用， 就能实现本地进程和网络进程任意沟通。
+</p>
+<p>
+程序的具体使用方法可以参见 help()。
+</p>
+
+= Introduction =
+
+Add your content here.
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
