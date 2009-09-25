@@ -1,0 +1,26 @@
+#labels duplexpipe,起因
+写 DuplexPipe 是因为“无聊”！真的，那天很无聊，想起小时候用扑克牌和姐姐比赛算24，就随手写了一个 Shell 脚本重温一下：
+
+#!/bin/sh  
+for ((i=0;i<4;i++))  
+do  
+    ((n=$RANDOM%10+1))  
+    echo -n "$n "  
+done  
+echo  
+i=0  
+while read exp  
+do  
+    ((i++))  
+    ((value=$exp))  
+    if [[ $value -ne 24 ]]  
+    then  
+        echo -n "Wrong! "  
+        echo "$exp=$value"  
+        echo "try again!"  
+    else  
+        echo "OK!"  
+        echo "Total use ${i}s"  
+        break  
+    fi  
+done
